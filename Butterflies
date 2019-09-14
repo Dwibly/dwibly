@@ -1,0 +1,158 @@
+#butterfly_average.py
+#Assignment #7
+
+import time
+
+def run():
+    print('\n\n\nWELCOME TO THE BUTTERFLY COLLECTING PROGRAM \n')
+    print('Enter the number of butterflies you collected each day you spent in the field.')
+    print('Please enter -1 when finished.\n\n\n ')      
+    
+    total = 0
+    days = 0     
+    while days != '-1':
+        
+        
+        
+        days += 1
+        print('Enter the number of butterflies for day', days , '(or -1 to end): ')
+        butterflies = input('')
+    
+
+    
+        totalButterflies = float(butterflies)
+        
+        total += totalButterflies 
+     
+        if '-1' == butterflies and '0' == total:
+                print('HERE ARE THE RESULTS OF YOUR BUTTERFLY COLLECTING')
+                print('You entered no butterfly data')
+            
+        if ("-1") == butterflies:
+    
+            #days + (-1.12)
+            avg = (total/ days)
+            print('HERE ARE THE RESULTS OF YOUR BUTTERFLY COLLECTING \nTotal bugs collected:', total + 1)
+            print('Average bugs collected per day:' ,avg)
+
+            time.sleep(3)
+            run()
+            
+       
+      
+run()   
+
+'''
+WELCOME TO THE BUTTERFLY COLLECTING PROGRAM
+
+Enter the number of butterflies you collected each day you spent in the field.
+Please enter -1 when finished.
+
+
+
+Enter the number of butterflies for day 1 (or -1 to end): 
+5
+Enter the number of butterflies for day 2 (or -1 to end): 
+20
+Enter the number of butterflies for day 3 (or -1 to end): 
+2
+Enter the number of butterflies for day 4 (or -1 to end): 
+-1
+
+HERE ARE THE RESULTS OF YOUR BUTTERFLY COLLECTING
+Total bugs collected:  27
+Average bugs collected per day:  9.00
+
+
+
+WELCOME TO THE BUTTERFLY COLLECTING PROGRAM 
+
+Enter the number of butterflies you collected each day you spent in the field.
+Please enter -1 when finished.
+
+
+ 
+Enter the number of butterflies for day 1 (or -1 to end): 
+
+5
+Enter the number of butterflies for day 2 (or -1 to end): 
+
+2
+Enter the number of butterflies for day 3 (or -1 to end): 
+
+20
+Enter the number of butterflies for day 4 (or -1 to end): 
+
+-1
+HERE ARE THE RESULTS OF YOUR BUTTERFLY COLLECTING 
+Total bugs collected: 27.0
+Average bugs collected per day:
+9
+
+
+
+
+
+    
+Write a program named butterfly_average.py that allows a user to input a series of integers representing butterflies collected in a day.
+
+Valid input is zero or greater (input validation is not required though, we will only input positive/valid numbers).
+At end of the program display total and average of butterflies collected.
+The number of butterflies read as input is not limited, so use a while loop with a sentinel (in this case -1) to terminate the input.
+This also means that NO butterflies may be entered if -1 is the first input from user.
+Note: You must use a while-loop and user input to receive credit for this assignment (NO lists or strings)
+
+I am leaving you to write the algorithm but I have provided some hints on design:
+
+Hint 1: Initialize 4 variables to zero: butterflies, days (this is the loop count variable), total and average.
+Use a variable named butterflies to hold user input (this is the sentinel)
+Add 1 to days each time loop is entered and use total to keep a running total of all butterflies entered (See Figure 4-6 Logic for calculating  running total).
+
+Hint 2: After loop finishes, use the total (this is the running total) and days (this is the loop count) variables to calculate and display the average number of butterflies collected each day. Use an if/else statement after the loop as we do not want to calculate the average if NO butterflies were entered by user (days equals zero).
+
+
+
+run
+
+WELCOME TO THE BUTTERFLY COLLECTING PROGRAM
+
+Enter the number of butterflies you collected each day you spent in the field.
+Please enter -1 when finished.
+
+Enter the number of butterflies for day 1 (or -1 to end): 
+5
+Enter the number of butterflies for day 2 (or -1 to end): 
+20
+Enter the number of butterflies for day 3 (or -1 to end): 
+2
+Enter the number of butterflies for day 4 (or -1 to end): 
+-1
+
+HERE ARE THE RESULTS OF YOUR BUTTERFLY COLLECTING
+Total bugs collected:  27
+Average bugs collected per day:  9.00
+
+
+
+
+
+
+
+run 2
+
+
+
+
+
+WELCOME TO THE BUTTERFLY COLLECTING PROGRAM
+
+Enter number of butterflies you collected each day you spent in the field.
+Please enter -1 when finished.
+
+Enter the number of butterflies for day 1 (or -1 to end): 
+-1
+
+HERE ARE THE RESULTS OF YOUR BUTTERFLY COLLECTING
+You entered no butterfly data
+
+'''
